@@ -6,6 +6,9 @@ import {MatPaginator} from "@angular/material/paginator";
 import {DoctorsService} from "../../services/doctors.service";
 import * as _ from 'lodash';
 
+class CardHarnessFilters {
+}
+
 @Component({
   selector: 'app-doctors',
   templateUrl: './doctors.component.html',
@@ -17,9 +20,9 @@ export class DoctorsComponent implements OnInit {
   doctorForm!: NgForm
 
   doctorData: Doctor;
-
+  hola: string ='hola';
   dataSource = new MatTableDataSource();
-  title: String = 'holaaa'
+  data = new CardHarnessFilters();
 
   displayedColumns: string[] = ['id', 'name', 'age'];
 

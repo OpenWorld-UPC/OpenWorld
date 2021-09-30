@@ -14,6 +14,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from "@angular/material/table";
 import {MatIconModule} from '@angular/material/icon';
 import { CardComponent } from './card/card.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -32,8 +34,9 @@ import { CardComponent } from './card/card.component';
     MatDividerModule,
     FormsModule,
     MatTableModule,
-    MatIconModule
-
+    MatIconModule,
+    FlexLayoutModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
