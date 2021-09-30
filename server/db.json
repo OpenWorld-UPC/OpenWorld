@@ -1,0 +1,19 @@
+{
+  "doctors": [
+    {
+      "id": 2,
+      "name": "Jason Bourne",
+      "age": 40
+    },
+    {
+      "id": 3,
+      "name": "Willian Norton",
+      "age": 50
+    },
+    {
+      "id": 4,
+      "name": "Mike Motown",
+      "age": 48
+    }
+  ]
+}
