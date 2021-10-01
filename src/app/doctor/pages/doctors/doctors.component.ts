@@ -25,7 +25,7 @@ export class DoctorsComponent implements OnInit {
   dataSource = new MatTableDataSource();
   data = new CardHarnessFilters();
 
-  displayedColumns: string[] = ['photoUrl', 'name', 'age','actions'];
+  displayedColumns: string[] = ['photoUrl', 'name', 'qualification', 'specialty','actions'];
 
   @ViewChild(MatPaginator, {static: true})
   paginator!: MatPaginator

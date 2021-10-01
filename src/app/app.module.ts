@@ -18,6 +18,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatButtonModule} from '@angular/material/button';
 import { DoctorDetailComponent } from './doctor/pages/doctor-detail/doctor-detail.component';
 import { DoctorContractComponent } from './doctor/pages/doctor-contract/doctor-contract.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { DoctorContractComponent } from './doctor/pages/doctor-contract/doctor-c
     MatTableModule,
     MatIconModule,
     FlexLayoutModule,
-    MatButtonModule
+    MatButtonModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

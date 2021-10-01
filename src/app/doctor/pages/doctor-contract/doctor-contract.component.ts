@@ -10,6 +10,7 @@ import {ActivatedRoute, ParamMap} from "@angular/router";
 })
 export class DoctorContractComponent implements OnInit {
   doctorData: Doctor;
+  meetLink:string = 'https://meet.google.com/cpu-joos-dyc';
 
   constructor(private doctorsService: DoctorsService, private route: ActivatedRoute) {
     this.doctorData = {} as Doctor;
