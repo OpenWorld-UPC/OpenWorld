@@ -5,6 +5,10 @@ import {NgForm} from "@angular/forms";
 import {MatPaginator} from "@angular/material/paginator";
 import {DoctorsService} from "../../services/doctors.service";
 import * as _ from 'lodash';
+import {Router} from "@angular/router";
+
+class CardHarnessFilters {
+}
 
 @Component({
   selector: 'app-doctors',
@@ -19,16 +23,16 @@ export class DoctorsComponent implements OnInit {
   doctorData: Doctor;
 
   dataSource = new MatTableDataSource();
-  title: String = 'holaaa'
+  data = new CardHarnessFilters();
 
-  displayedColumns: string[] = ['id', 'name', 'age'];
+  displayedColumns: string[] = ['photoUrl', 'name', 'age','actions'];
 
   @ViewChild(MatPaginator, {static: true})
   paginator!: MatPaginator
 
   isEditMode = false;
 
-  constructor(private doctorsService: DoctorsService) {
+  constructor(private doctorsService: DoctorsService, private router:Router) {
     this.doctorData = {} as Doctor;
   }
 
@@ -84,6 +88,12 @@ export class DoctorsComponent implements OnInit {
     })
   }
 
+  onSelectDoctor(element:Doctor){
+  this.router.navigate(['/doctors', element.id])
+  }
+  onSelectDoctorContract(element:Doctor){
+    this.router.navigate(['/contract', element.id])
+  }
   onSubmit() {
     if (this.doctorForm.valid) {
       if (this.isEditMode) {
