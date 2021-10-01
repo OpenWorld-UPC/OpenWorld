@@ -12,18 +12,22 @@
       <th mat-header-cell *matHeaderCellDef>Name</th>
       <td mat-cell *matCellDef="let element">{{element.name}}</td>
     </ng-container>
-    <ng-container matColumnDef="age">
-      <th mat-header-cell *matHeaderCellDef>Age</th>
-      <td mat-cell *matCellDef="let element">{{element.age}}</td>
+    <ng-container matColumnDef="qualification">
+      <th mat-header-cell *matHeaderCellDef>Qualification</th>
+      <td mat-cell *matCellDef="let element">{{element.qualification}}</td>
     </ng-container>
     <ng-container matColumnDef="address">
       <th mat-header-cell *matHeaderCellDef>Address</th>
       <td mat-cell *matCellDef="let element">{{element.address}}</td>
     </ng-container>
+    <ng-container matColumnDef="specialty">
+      <th mat-header-cell *matHeaderCellDef>Specialty</th>
+      <td mat-cell *matCellDef="let element">{{element.specialty}}</td>
+    </ng-container>
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef></th>
       <td mat-cell *matCellDef="let element">
-       <button mat-button (click)="onSelectDoctorContract(element)">
+       <button mat-button color="primary" (click)="onSelectDoctorContract(element)">
          Contract
        </button>
         <button mat-button (click)="onSelectDoctor(element)">

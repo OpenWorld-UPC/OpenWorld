@@ -1,14 +1,13 @@
-<mat-card>
-  <mat-card-title>{{doctorData.name}}</mat-card-title>
-  <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-  <mat-card-content>
-    <p>This card indeterminates progress bar.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consectetur cupiditate debitis delectus
-      dignissimos enim error expedita id illo ipsa labore laboriosam nam necessitatibus nesciunt nobis quisquam quo,
-      sed, voluptatem.</p>
-  </mat-card-content>
-  <mat-card-actions>
-
-    <a href="https://meet.google.com/cpu-joos-dyc" mat-raised-button color="primary">Go Meet</a>
-  </mat-card-actions>
-</mat-card>
+<div fxLayoutAlign="center center" class="section-doctor-contract" >
+  <div>
+    <h2>{{doctorData.name}}</h2>
+    <h3>Specialty: {{doctorData.specialty}}</h3>
+    <mat-card-content>
+      <p>{{doctorData.workplace}}</p>
+      <p>{{doctorData.description}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a href="{{meetLink}}" mat-raised-button color="primary" target="_blank">Go Meet</a>
+    </mat-card-actions>
+  </div>
+</div>
