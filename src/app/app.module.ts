@@ -16,13 +16,17 @@ import {MatIconModule} from '@angular/material/icon';
 import { CardComponent } from './card/card.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatButtonModule} from '@angular/material/button';
+import { DoctorDetailComponent } from './doctor/pages/doctor-detail/doctor-detail.component';
+import { DoctorContractComponent } from './doctor/pages/doctor-contract/doctor-contract.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DoctorsComponent,
     HomeComponent,
-    CardComponent
+    CardComponent,
+    DoctorDetailComponent,
+    DoctorContractComponent
   ],
   imports: [
     BrowserModule,
