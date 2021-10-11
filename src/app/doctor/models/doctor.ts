@@ -7,4 +7,5 @@ export interface Doctor {
   workplace:string;
   specialty: string;
   qualification:string;
+  meetUrl:string;
 }

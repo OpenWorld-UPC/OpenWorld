@@ -22,6 +22,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatListModule} from "@angular/material/list";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatGridListModule} from "@angular/material/grid-list";
+import {ObjToArrayPipe} from "./doctor/pages/doctors/objToArray.pipe";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {MatGridListModule} from "@angular/material/grid-list";
     HomeComponent,
     CardComponent,
     DoctorDetailComponent,
-    DoctorContractComponent
+    DoctorContractComponent,
+    ObjToArrayPipe
   ],
 
     imports: [

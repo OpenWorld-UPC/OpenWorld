@@ -1,44 +1,50 @@
-<div class="table-wrapper">
+
+<div class="content">
   <h1>Doctors List</h1>
-
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-    <ng-container matColumnDef="photoUrl">
-      <th mat-header-cell *matHeaderCellDef>Avatar</th>
-      <td mat-cell *matCellDef="let element">
-        <img class="avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ32iqtgGf7dG1jaZo9IH9Cd13hzjjmR-w9xQ&usqp=CAU" alt="user avatar">
-      </td>
-    </ng-container>
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef>Name</th>
-      <td mat-cell *matCellDef="let element">{{element.name}}</td>
-    </ng-container>
-    <ng-container matColumnDef="qualification">
-      <th mat-header-cell *matHeaderCellDef>Qualification</th>
-      <td mat-cell *matCellDef="let element">{{element.qualification}}</td>
-    </ng-container>
-    <ng-container matColumnDef="address">
-      <th mat-header-cell *matHeaderCellDef>Address</th>
-      <td mat-cell *matCellDef="let element">{{element.address}}</td>
-    </ng-container>
-    <ng-container matColumnDef="specialty">
-      <th mat-header-cell *matHeaderCellDef>Specialty</th>
-      <td mat-cell *matCellDef="let element">{{element.specialty}}</td>
-    </ng-container>
-    <ng-container matColumnDef="actions">
-      <th mat-header-cell *matHeaderCellDef></th>
-      <td mat-cell *matCellDef="let element">
-       <button mat-button color="primary" (click)="onSelectDoctorContract(element)">
-         Contract
-       </button>
-        <button mat-button (click)="onSelectDoctor(element)">
-          View Profile
-        </button>
-      </td>
-    </ng-container>
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"
-        [ngClass]="{'editable-row':doctorData.id == row.id}"></tr>
-  </table>
-
+  <div fxLayout="row wrap">
+    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let doctor of dataSource.data | ObjToArray" >
+      <app-card [data]="doctor"></app-card>
+    </div>
+    <!--
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="photoUrl">
+        <th mat-header-cell *matHeaderCellDef>Avatar</th>
+        <td mat-cell *matCellDef="let element">
+          <img class="avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ32iqtgGf7dG1jaZo9IH9Cd13hzjjmR-w9xQ&usqp=CAU" alt="user avatar">
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let element">{{element.name}}</td>
+      </ng-container>
+      <ng-container matColumnDef="qualification">
+        <th mat-header-cell *matHeaderCellDef>Qualification</th>
+        <td mat-cell *matCellDef="let element">{{element.qualification}}</td>
+      </ng-container>
+      <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef>Address</th>
+        <td mat-cell *matCellDef="let element">{{element.address}}</td>
+      </ng-container>
+      <ng-container matColumnDef="specialty">
+        <th mat-header-cell *matHeaderCellDef>Specialty</th>
+        <td mat-cell *matCellDef="let element">{{element.specialty}}</td>
+      </ng-container>
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element">
+         <button mat-button color="primary" (click)="onSelectDoctorContract(element)">
+           Contract
+         </button>
+          <button mat-button (click)="onSelectDoctor(element)">
+            View Profile
+          </button>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+          [ngClass]="{'editable-row':doctorData.id == row.id}"></tr>
+    </table>
+    -->
+  </div>
 </div>
 <router-outlet></router-outlet>
