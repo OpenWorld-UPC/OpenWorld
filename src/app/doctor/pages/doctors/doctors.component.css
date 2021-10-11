@@ -1,7 +1,14 @@
 .content {
-  padding: 16px;
+  margin: 16px;
 }
 
 .content > mat-card {
   width: 200px;
+}
+
+.title{
+  padding: 10px;
+  text-align: center;
+  color: #050505;
+  font-size: 30px;
 }
