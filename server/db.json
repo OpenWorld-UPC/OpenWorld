@@ -77,5 +77,39 @@
       "qualification": "Excellent!",
       "meetUrl": "https://meet.google.com/cpu-joos-dyc"
     }
+  ],
+  "patients": [
+    {
+      "id": 1,
+      "name": "Pedro Jackson",
+      "age": 31,
+      "photoUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ingles.com%2Ftraductor%2Fperson&psig=AOvVaw2xFN4Ot--FKes8BD8lZo5J&ust=1634849358217000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCIiy9Mzu2fMCFQAAAAAdAAAAABAI"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "title": "Answer about the query",
+      "content": "Dear patient, I will gladly assist you. Please enter the conference",
+      "sentAt": "21-09-21 15:26:53",
+      "idDoctor": 1,
+      "idPatient": 1
+    },
+    {
+      "id": 2,
+      "title": "Answer about the query",
+      "content": "Dear patient, I will gladly assist you. Please enter the conference",
+      "sentAt": "21-09-21 15:26:53",
+      "idDoctor": 1,
+      "idPatient": 1
+    },
+    {
+      "id": 3,
+      "title": "Answer about the query",
+      "content": "Dear patient, I will gladly assist you. Please enter the conference",
+      "sentAt": "21-09-21 15:26:53",
+      "idDoctor": 1,
+      "idPatient": 1
+    }
   ]
 }

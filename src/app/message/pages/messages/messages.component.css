@@ -1,0 +1,15 @@
+.title{
+  padding: 10px;
+  text-align: center;
+  color: #050505;
+  font-size: 30px;
+}
+
+.list-size{
+  width: 100%;
+}
+
+.mat-list-subtitle{
+  font-size: 12px;
+  font-weight: bold;
+}

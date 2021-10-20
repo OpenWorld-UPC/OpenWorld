@@ -1,0 +1,18 @@
+<div class="content">
+  <h1 class="title">All Your Messages</h1>
+  <div fxLayout="row wrap">
+    <mat-list role="list" class="list-size">
+      <mat-list-item role="listitem" *ngFor="let message of dataSource.data | ObjToArray">
+        <mat-icon mat-list-icon>mail_outline</mat-icon>
+        <div mat-line>{{message.title}}</div>
+        <div mat-line> {{message.content }} </div>
+        <div mat-list-option>
+          <p>{{message.sentAt.substr(0,8)}}</p>
+          <p class="mat-list-subtitle">Time: {{message.sentAt.substr(9)}}</p>
+        </div>
+      </mat-list-item>
+    </mat-list>
+    <mat-divider></mat-divider>
+  </div>
+</div>
+<router-outlet></router-outlet>
