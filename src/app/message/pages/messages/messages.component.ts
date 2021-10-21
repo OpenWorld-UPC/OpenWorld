@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
-import {DoctorsService} from "../../../doctor/services/doctors.service";
 import {Router} from "@angular/router";
 import {Message} from "../../models/message";
 import {MessagesService} from "../../services/messages.service";

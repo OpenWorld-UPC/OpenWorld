@@ -1,4 +1,4 @@
-<div class="content">
+<div>
   <h1 class="title">All Your Messages</h1>
   <div fxLayout="row wrap">
     <mat-list role="list" class="list-size">
@@ -10,9 +10,9 @@
           <p>{{message.sentAt.substr(0,8)}}</p>
           <p class="mat-list-subtitle">Time: {{message.sentAt.substr(9)}}</p>
         </div>
+      <mat-divider></mat-divider>
       </mat-list-item>
     </mat-list>
-    <mat-divider></mat-divider>
   </div>
 </div>
 <router-outlet></router-outlet>

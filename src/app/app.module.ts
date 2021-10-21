@@ -9,7 +9,7 @@ import {MatDividerModule} from "@angular/material/divider";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import { DoctorsComponent } from './doctor/pages/doctors/doctors.component';
 import { HomeComponent } from './public/home/home.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from "@angular/material/table";
 import {MatIconModule} from '@angular/material/icon';
@@ -24,6 +24,10 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {ObjToArrayPipe} from "./objToArray.pipe";
 import { MessagesComponent } from './message/pages/messages/messages.component';
+import { ReservationsComponent } from './reservation/pages/reservations/reservations.component';
+import {MatDatepickerModule} from '@angular/material/datepicker'
+import {MatNativeDateModule} from "@angular/material/core";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -34,7 +38,8 @@ import { MessagesComponent } from './message/pages/messages/messages.component';
     DoctorDetailComponent,
     DoctorContractComponent,
     ObjToArrayPipe,
-    MessagesComponent
+    MessagesComponent,
+    ReservationsComponent
   ],
 
     imports: [
@@ -53,7 +58,11 @@ import { MessagesComponent } from './message/pages/messages/messages.component';
         MatFormFieldModule,
         MatListModule,
         MatSidenavModule,
-        MatGridListModule
+        MatGridListModule,
+        ReactiveFormsModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+      MatInputModule
     ],
 
   providers: [],

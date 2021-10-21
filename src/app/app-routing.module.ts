@@ -5,10 +5,12 @@ import {HomeComponent} from "./public/home/home.component";
 import {DoctorDetailComponent} from "./doctor/pages/doctor-detail/doctor-detail.component";
 import {DoctorContractComponent} from "./doctor/pages/doctor-contract/doctor-contract.component";
 import {MessagesComponent} from "./message/pages/messages/messages.component";
+import {ReservationsComponent} from "./reservation/pages/reservations/reservations.component";
 
 const routes: Routes = [
   {path: 'doctors', component: DoctorsComponent},
   {path: 'messages', component: MessagesComponent},
+  {path: 'reservations', component: ReservationsComponent},
   {path: 'home', component: HomeComponent},
   {path: 'doctors/:id', component: DoctorDetailComponent},
   {path: 'contract/:id', component: DoctorContractComponent},

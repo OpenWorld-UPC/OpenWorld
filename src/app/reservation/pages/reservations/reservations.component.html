@@ -1,0 +1,14 @@
+<div>
+  <h2>Please choose which days you will be available to schedule your meeting with the doctor</h2>
+  <mat-form-field class="example-form-field" appearance="fill">
+    <mat-label>Choose a Date</mat-label>
+    <input matInput [matDatepicker]="picker" (dateChange)="dateChanged($event)">
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <button mat-raised-button (click)="picker.open()">Open</button>
+  <button mat-raised-button (click)="addReservation()" color="primary">Reserve</button>
+
+
+</div>
+<router-outlet></router-outlet>
+
