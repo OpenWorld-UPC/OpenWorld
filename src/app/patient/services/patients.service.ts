@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {Observable, throwError} from "rxjs";
+import {Message} from "../../message/models/message";
 import {catchError, retry} from "rxjs/operators";
-import {Message} from "../models/message";
+import {Patient} from "../models/patient";
 
 @Injectable({
   providedIn: 'root'
 })
-export class MessagesService {
+export class PatientsService {
 
-  basePath = 'http://localhost:3000/api/v1/messages';
+  basePath = 'http://localhost:3000/api/v1/patients';
 
   constructor(private http: HttpClient) {
   }
@@ -34,9 +35,9 @@ export class MessagesService {
     return throwError('Something happened with request, please try again');
   }
 
-  //Get Message By Id Patient
-  getById(id: number): Observable<Message> {
-    return this.http.get<Message>(`${this.basePath}?idPatient=${id}`)
+  //Get Patient By Id
+  getById(id: number): Observable<Patient> {
+    return this.http.get<Patient>(`${this.basePath}/${id}`)
       .pipe(retry(2),
         catchError(this.handleError));
   }

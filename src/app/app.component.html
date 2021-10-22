@@ -5,8 +5,9 @@
     <div class="mat-spacer"></div>
     <!--App Options -->
     <a mat-button [routerLink]="'/home'">Home</a>
-    <a mat-button [routerLink]="'/doctors'">Doctors</a>
-    <a mat-button [routerLink]="'/messages'">Messages</a>
+    <a mat-button [routerLink]="['/patient',1,'doctors']">Doctors</a>
+    <!-- The identification of the user's patient that we can obtain when implementing the login -->
+    <a mat-button [routerLink]="['/patient' ,1 ,'messages']">Messages</a>
   </mat-toolbar-row>
 </mat-toolbar>
 <router-outlet></router-outlet>

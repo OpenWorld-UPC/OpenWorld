@@ -6,14 +6,16 @@ import {DoctorDetailComponent} from "./doctor/pages/doctor-detail/doctor-detail.
 import {DoctorContractComponent} from "./doctor/pages/doctor-contract/doctor-contract.component";
 import {MessagesComponent} from "./message/pages/messages/messages.component";
 import {ReservationsComponent} from "./reservation/pages/reservations/reservations.component";
+import {MessageDetailComponent} from "./message/pages/message-detail/message-detail.component";
 
 const routes: Routes = [
-  {path: 'doctors', component: DoctorsComponent},
-  {path: 'messages', component: MessagesComponent},
-  {path: 'reservations', component: ReservationsComponent},
+  {path: 'patient/:idPatient/doctors', component: DoctorsComponent},
+  {path: 'patient/:idPatient/messages', component: MessagesComponent},
+  {path: 'patient/:idPatient/messages/:idMessage', component: MessageDetailComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'doctors/:id', component: DoctorDetailComponent},
-  {path: 'contract/:id', component: DoctorContractComponent},
+  {path: 'patient/:idPatient/doctors/:id', component: DoctorDetailComponent},
+  {path: 'patient/:idPatient/contract/:id', component: DoctorContractComponent},
+  {path: 'patient/:idPatient/contract/:id/reservations', component: ReservationsComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
 ];
 

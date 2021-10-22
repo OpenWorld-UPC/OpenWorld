@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
-import {Router} from "@angular/router";
+import {ActivatedRoute, ParamMap, Router} from "@angular/router";
 import {Message} from "../../models/message";
-import {MessagesService} from "../../services/messages.service";
+import {Reservation} from "../../../reservation/model/reservation";
+import {ReservationsService} from "../../../reservation/services/reservations.service";
 
 @Component({
   selector: 'app-messages',
@@ -11,22 +12,29 @@ import {MessagesService} from "../../services/messages.service";
 })
 export class MessagesComponent implements OnInit {
 
-  messageData: Message;
+  reservationData: Reservation;
+  idPatient?: number;
 
-  dataSource = new MatTableDataSource();
 
-  constructor(private messagesService: MessagesService, private router:Router) {
-    this.messageData = {} as Message;
+  constructor(private reservationsService: ReservationsService, private router: Router, private route: ActivatedRoute) {
+    this.reservationData = {} as Reservation;
   }
 
   ngOnInit(): void {
-    this.getAllMessages(1);
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      this.idPatient = parseInt(<string>params.get('idPatient'));
+      this.getAllMessages(this.idPatient);
+    });
   }
 
   getAllMessages(idPatient: number) {
-    this.messagesService.getById(idPatient).subscribe((response: any) => {
+    this.reservationsService.getReservationsById(idPatient).subscribe((response: any) => {
       console.log(response)
-      this.dataSource.data = response;
+      this.reservationData = response;
     })
+  }
+
+  onClick(reservation: Reservation) {
+    this.router.navigate(['/patient', this.idPatient, 'messages', reservation.id]);
   }
 }

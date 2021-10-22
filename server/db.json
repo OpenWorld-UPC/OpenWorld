@@ -107,14 +107,23 @@
   ],
   "reservation": [
     {
-      "id": 1,
-      "meetDate": "21-12-21 15:26:53",
+      "meetDate": "2021-10-29T05:00:00.000Z",
+      "sentAt": "Thu Oct 21 2021",
+      "idDoctor": 2,
+      "idPatient": 1,
       "meetUrl": "https://meet.google.com/cpu-joos-dyc",
-      "idDoctor": "2",
-      "idPatient": "1"
+      "title": "title prueba",
+      "content": "content prueba",
+      "id": 1
     },
     {
-      "meetDate": "2021-10-08T05:00:00.000Z",
+      "meetDate": "2021-10-29T05:00:00.000Z",
+      "sentAt": "Thu Oct 21 2021",
+      "idDoctor": 2,
+      "idPatient": 1,
+      "meetUrl": "https://meet.google.com/cpu-joos-dyc",
+      "title": "consulta sobre mi acné",
+      "content": "hola doctor quiero que me revise mis cara, por q tengo muchos chupos",
       "id": 2
     }
   ]

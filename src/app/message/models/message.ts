@@ -1,3 +1,5 @@
+import {Reservation} from "../../reservation/model/reservation";
+
 export interface Message {
   id: number;
   title: string;

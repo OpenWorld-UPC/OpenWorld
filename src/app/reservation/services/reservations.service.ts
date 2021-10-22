@@ -3,6 +3,7 @@ import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {Observable, throwError} from "rxjs";
 import {Reservation} from "../model/reservation";
 import {catchError, retry} from "rxjs/operators";
+import {Doctor} from "../../doctor/models/doctor";
 
 @Injectable({
   providedIn: 'root'
@@ -37,6 +38,13 @@ export class ReservationsService {
   //Create Reservation
   create(createReservationDto: Reservation): Observable<Reservation> {
     return this.http.post<Reservation>(this.basePath, JSON.stringify(createReservationDto), this.httpOptions)
+      .pipe(retry(2),
+        catchError(this.handleError));
+  }
+
+  //Get Reservation By Id
+  getReservationsById(id: number): Observable<Reservation> {
+    return this.http.get<Reservation>(`${this.basePath}?idPatient=${id}`)
       .pipe(retry(2),
         catchError(this.handleError));
   }

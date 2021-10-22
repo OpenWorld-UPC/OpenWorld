@@ -9,7 +9,13 @@
   width: 100%;
 }
 
+.list-size :hover{
+  background-color: #dfe9ef;
+  cursor: pointer;
+}
+
 .mat-list-subtitle{
   font-size: 12px;
   font-weight: bold;
 }
+
