@@ -1,0 +1,17 @@
+<div>
+  <h1 class="title">Your pending meetings</h1>
+  <div fxLayout="row wrap">
+    <mat-list role="list" class="list-size">
+      <mat-list-item role="listitem"  *ngFor="let message of reservationData | ObjToArray" (click)="onClick(message)">
+        <mat-icon mat-list-icon>mail_outline</mat-icon>
+        <div mat-line>Response on your meeting request</div>
+        <div mat-line> {{message.title }} </div>
+        <div mat-list-option>
+          <p>{{message.sentAt}}</p>
+        </div>
+        <mat-divider></mat-divider>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>
+<router-outlet></router-outlet>

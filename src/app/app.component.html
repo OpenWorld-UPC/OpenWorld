@@ -1,11 +1,26 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" *ngIf="useDefault==true">
   <mat-toolbar-row>
-    <h1>OpenWorld</h1>
+    <h1>OpenWorld - Patient</h1>
     <mat-divider [vertical]="true" [inset]="true"></mat-divider>
     <div class="mat-spacer"></div>
     <!--App Options -->
     <a mat-button [routerLink]="'/home'">Home</a>
-    <a mat-button [routerLink]="'/doctors'">Doctors</a>
+    <!-- The identification of the User's Patient that we can obtain when implementing the login -->
+    <a mat-button [routerLink]="['/patients',1,'doctors']">Doctors</a>
+    <a mat-button [routerLink]="['/patients' ,1 ,'messages']">Messages</a>
+    <mat-slide-toggle [checked]="useDefault" (change)="toggle($event)"></mat-slide-toggle>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-toolbar color="primary" *ngIf="useDefault==false">
+  <mat-toolbar-row>
+    <h1>OpenWorld - Doctor</h1>
+    <mat-divider [vertical]="true" [inset]="true"></mat-divider>
+    <div class="mat-spacer"></div>
+    <!--App Options -->
+    <a mat-button [routerLink]="'/home'">Home</a>
+    <!-- The identification of the User's Doctor that we can obtain when implementing the login -->
+    <a mat-button [routerLink]="['/doctors' ,1 ,'messages']">Messages</a>
+    <mat-slide-toggle [checked]="useDefault" (change)="toggle($event)"></mat-slide-toggle>
   </mat-toolbar-row>
 </mat-toolbar>
 <router-outlet></router-outlet>

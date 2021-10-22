@@ -7,7 +7,7 @@
       <p>{{doctorData.description}}</p>
     </mat-card-content>
     <mat-card-actions>
-      <a href="{{doctorData.meetUrl}}" mat-raised-button color="primary" target="_blank">Go Meet</a>
+      <a [routerLink]="['/patients',1,'contract', doctorData.id, 'reservations',]" mat-raised-button color="primary">Create reservation</a>
     </mat-card-actions>
   </div>
 </div>
