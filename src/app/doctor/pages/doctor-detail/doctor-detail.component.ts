@@ -36,7 +36,7 @@ export class DoctorDetailComponent implements OnInit {
   }
 
   onSelectDoctorContract(elementD: Doctor,elementP: Patient) {
-    this.router.navigate(['/patient',elementP.id, 'contract', elementD.id])
+    this.router.navigate(['/patients',elementP.id, 'contract', elementD.id])
   }
 
 }

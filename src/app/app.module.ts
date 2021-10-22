@@ -29,6 +29,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker'
 import {MatNativeDateModule} from "@angular/material/core";
 import {MatInputModule} from "@angular/material/input";
 import {MessageDetailComponent} from './message/pages/message-detail/message-detail.component';
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import { MessageResponseComponent } from './message/pages/message-response/message-response.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ import {MessageDetailComponent} from './message/pages/message-detail/message-det
     ObjToArrayPipe,
     MessagesComponent,
     ReservationsComponent,
-    MessageDetailComponent
+    MessageDetailComponent,
+    MessageResponseComponent
   ],
 
   imports: [
@@ -64,7 +67,8 @@ import {MessageDetailComponent} from './message/pages/message-detail/message-det
     ReactiveFormsModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatInputModule
+    MatInputModule,
+    MatSlideToggleModule
   ],
 
   providers: [],

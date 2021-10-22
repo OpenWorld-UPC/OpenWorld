@@ -17,12 +17,12 @@ export class CardComponent implements OnInit {
   }
 
   onSelectDoctor(element:Doctor){
-    this.router.navigate(['/patient',1,'doctors', element.id])
+    this.router.navigate(['/patients',1,'doctors', element.id])
   }
 
 
   onSelectDoctorContract(element:Doctor){
-    this.router.navigate(['/patient',1,'contract', element.id])
+    this.router.navigate(['/patients',1,'contract', element.id])
   }
 
 }

@@ -6,5 +6,6 @@ export interface Reservation{
   title: string,
   content: string;
   idDoctor: number,
-  idPatient: number
+  idPatient: number,
+  status: boolean,
 }

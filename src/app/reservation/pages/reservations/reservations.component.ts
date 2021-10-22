@@ -39,6 +39,8 @@ export class ReservationsComponent implements OnInit {
     });
 
     this.reservationData.meetUrl = "https://meet.google.com/cpu-joos-dyc"
+    // @ts-ignore
+    this.reservationData.status = null;
   }
 
   addReservation() {
@@ -48,10 +50,6 @@ export class ReservationsComponent implements OnInit {
         return o
       })
     })
-  }
-
-  onSubmit(){
-    console.log("send")
   }
 }
 

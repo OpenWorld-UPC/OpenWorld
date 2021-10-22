@@ -1,18 +1,18 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {Observable, throwError} from "rxjs";
 import {Reservation} from "../model/reservation";
 import {catchError, retry} from "rxjs/operators";
-import {Doctor} from "../../doctor/models/doctor";
+import {Router} from "@angular/router";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ReservationsService {
 
-  basePath = 'http://localhost:3000/api/v1/reservation';
+  basePath = 'http://localhost:3000/api/v1/reservations';
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
   }
 
   httpOptions = {
@@ -43,9 +43,24 @@ export class ReservationsService {
   }
 
   //Get Reservation By Id
-  getReservationsById(id: number): Observable<Reservation> {
-    return this.http.get<Reservation>(`${this.basePath}?idPatient=${id}`)
+  getReservationsById(id: number, idTypeUser: string): Observable<Reservation> {
+    return this.http.get<Reservation>(`${this.basePath}?${idTypeUser}=${id}`)
       .pipe(retry(2),
         catchError(this.handleError));
   }
+
+  //Get By Id
+  getById(id: number): Observable<Reservation> {
+    return this.http.get<Reservation>(`${this.basePath}/${id}`)
+      .pipe(retry(2),
+        catchError(this.handleError));
+  }
+
+  //Update Reservation
+  update(id: number, createReservationDto: Reservation): Observable<Reservation> {
+    return this.http.put<Reservation>(`${this.basePath}/${id}`, JSON.stringify(createReservationDto), this.httpOptions)
+      .pipe(retry(2),
+        catchError(this.handleError));
+  }
+
 }

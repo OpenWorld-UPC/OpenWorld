@@ -1,0 +1,11 @@
+<div>
+  <h2>{{reservationData.title}}</h2>
+  <p>{{reservationData.content}}</p>
+  <div *ngIf="reservationData.status==null">
+    <p> The doctor is doctor is processing your request.
+      <mat-icon>access_time</mat-icon>
+    </p>
+  </div>
+  <button mat-raised-button (click)="addReservation(true)" color="primary">Confirm</button>
+  <button mat-raised-button (click)="addReservation(false)" color="secondary">Cancel</button>
+</div>

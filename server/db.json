@@ -105,7 +105,18 @@
       "idPatient": 1
     }
   ],
-  "reservation": [
+  "reservations": [
+    {
+      "meetDate": "2021-10-29T05:00:00.000Z",
+      "sentAt": "Thu Oct 21 2021",
+      "idDoctor": 1,
+      "idPatient": 1,
+      "meetUrl": "https://meet.google.com/cpu-joos-dyc",
+      "title": "title prueba",
+      "content": "content prueba",
+      "id": 1,
+      "status": true
+    },
     {
       "meetDate": "2021-10-29T05:00:00.000Z",
       "sentAt": "Thu Oct 21 2021",
@@ -114,7 +125,8 @@
       "meetUrl": "https://meet.google.com/cpu-joos-dyc",
       "title": "title prueba",
       "content": "content prueba",
-      "id": 1
+      "id": 2,
+      "status": true
     },
     {
       "meetDate": "2021-10-29T05:00:00.000Z",
@@ -123,8 +135,20 @@
       "idPatient": 1,
       "meetUrl": "https://meet.google.com/cpu-joos-dyc",
       "title": "consulta sobre mi acné",
-      "content": "hola doctor quiero que me revise mis cara, por q tengo muchos chupos",
-      "id": 2
+      "content": "hola doctor quiero que me revise mis cara, por q tengo muchos granos",
+      "id": 3,
+      "status": false
+    },
+    {
+      "meetDate": "2021-10-04T05:00:00.000Z",
+      "sentAt": "Thu Oct 21 2021",
+      "idDoctor": 3,
+      "idPatient": 1,
+      "meetUrl": "https://meet.google.com/cpu-joos-dyc",
+      "status": null,
+      "title": "o",
+      "content": "oo",
+      "id": 4
     }
   ]
 }
