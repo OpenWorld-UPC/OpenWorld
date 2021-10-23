@@ -1,14 +1,9 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
 import {Doctor} from "../../models/doctor";
-import {NgForm} from "@angular/forms";
-import {MatPaginator} from "@angular/material/paginator";
 import {DoctorsService} from "../../services/doctors.service";
-import * as _ from 'lodash';
 import {Router} from "@angular/router";
 
-class CardHarnessFilters {
-}
 
 @Component({
   selector: 'app-doctors',
