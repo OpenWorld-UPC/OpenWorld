@@ -1,11 +1,18 @@
-<div>
-  <h2>{{reservationData.title}}</h2>
-  <p>{{reservationData.content}}</p>
-  <div *ngIf="reservationData.status==null">
-    <p> The doctor is doctor is processing your request.
-      <mat-icon>access_time</mat-icon>
-    </p>
+<div class="main">
+  <div class="image-main"></div>
+<div class="msg-doctor">
+  <div class="msg-info">
+    <h2 class="title">{{reservationData.title}}</h2>
+    <p>{{reservationData.content}}</p>
+    <div *ngIf="reservationData.status==null">
+       <p> The doctor is doctor is processing your request.
+        <mat-icon>access_time</mat-icon>
+       </p>
+   </div>
   </div>
-  <button mat-raised-button (click)="addReservation(true)" color="primary">Confirm</button>
-  <button mat-raised-button (click)="addReservation(false)" color="secondary">Cancel</button>
+    <div class="msg-btn">
+    <button  class="btn-status" mat-raised-button (click)="addReservation(true)" color="primary">Confirm</button>
+    <button class="btn-status" mat-raised-button (click)="addReservation(false)" color="secondary">Cancel</button>
+    </div>
+  </div>
 </div>

@@ -1,5 +1,8 @@
 <div>
   <h1 class="title">Your pending meetings</h1>
+  <div class="main">
+    <div class="image-main"></div>
+  </div>
   <div fxLayout="row wrap">
     <mat-list role="list" class="list-size">
       <mat-list-item role="listitem"  *ngFor="let message of reservationData | ObjToArray" (click)="onClick(message)">

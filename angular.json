@@ -103,6 +103,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "open-world:build:production",
+            "firebaseProject": "openworldapp-eb71e",
+            "firebaseHostingSite": "openworldapp-eb71e"
+          }
         }
       }
     }

@@ -5,3 +5,28 @@
 .example-full-width {
   width: 100%;
 }
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.image-calendar{
+  width: 14vw;
+  padding: 0;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('src/assets/calendar.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.text{
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 2%;
+}

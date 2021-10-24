@@ -1,1 +1,56 @@
 
+.title{
+  color: #050505;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 3%;
+}
+.msg-patient{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.msg-patient{
+  margin-top: 1%;
+}
+.image-waiting{
+  width: 14vw;
+  padding: 0;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('src/assets/waiting.svg');
+  background-repeat: no-repeat;
+  margin-right: 2%;
+}
+.image-success{
+  width: 14vw;
+  padding: 0;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('src/assets/successf.svg');
+  background-repeat: no-repeat;
+  margin-right: 2%;
+}
+.image-cancel{
+  width: 14vw;
+  padding: 0;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('src/assets/cancel.svg');
+  background-repeat: no-repeat;
+  margin-right: 2%;
+}
+.main{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+}
