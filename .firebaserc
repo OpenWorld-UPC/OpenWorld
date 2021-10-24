@@ -1,0 +1,22 @@
+{
+  "projects": {
+    "default": "openworldapp-eb71e",
+    "staging": "openworld-77ae7"
+  },
+  "targets": {
+    "openworld-77ae7": {
+      "hosting": {
+        "open-world": [
+          "openworld-77ae7"
+        ]
+      }
+    },
+    "openworldapp-eb71e": {
+      "hosting": {
+        "open-world": [
+          "openworldapp-eb71e"
+        ]
+      }
+    }
+  }
+}
