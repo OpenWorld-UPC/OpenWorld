@@ -1,0 +1,43 @@
+.title{
+  padding: 10px;
+  text-align: center;
+  color: #050505;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 2%;
+}
+
+.list-size{
+  width: 100%;
+}
+
+.list-size :hover{
+  background-color: #dfe9ef;
+  cursor: pointer;
+}
+
+.mat-list-subtitle{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.image-main {
+  width: 14vw;
+  padding: 0;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('src/assets/email.svg');
+  background-repeat: no-repeat;
+  margin: 0;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.main{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+}

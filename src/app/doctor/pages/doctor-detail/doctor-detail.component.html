@@ -1,0 +1,21 @@
+<div fxLayoutAlign="center center" class="section-doctor-detail">
+  <div>
+    <div>
+      <mat-card-header class="content">
+        <h2>{{doctorData.name}}</h2>
+        <h3>{{doctorData.specialty}}</h3>
+      </mat-card-header>
+    </div>
+    <div class="center content">
+      <img mat-card-image src="{{doctorData.photoUrl}}" alt="Photo of a Shiba Inu" class="avatar">
+    </div>
+    <mat-card-content>
+      <p>
+        {{doctorData.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="primary" (click)="onSelectDoctorContract(doctorData, patientData)">Contratar</button>
+    </mat-card-actions>
+  </div>
+</div>

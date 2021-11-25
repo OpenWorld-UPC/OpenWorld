@@ -1,0 +1,15 @@
+
+<div fxLayoutAlign="center center" class="section-doctor-contract" >
+  <div>
+    <h2>{{doctorData.name}}</h2>
+    <h3>Specialty: {{doctorData.specialty}}</h3>
+    <mat-card-content>
+      <p>{{doctorData.workplace}}</p>
+      <p>{{doctorData.description}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a [routerLink]="['/patients',1,'contract', doctorData.id, 'reservations',]" mat-raised-button color="primary">Create reservation</a>
+    </mat-card-actions>
+  </div>
+</div>
+

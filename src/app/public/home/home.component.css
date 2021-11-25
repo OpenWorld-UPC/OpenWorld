@@ -1,0 +1,104 @@
+
+.image-main {
+  width: 100%;
+  padding: 0;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-image: url('src/assets/doctor-main.jpg');
+  background-position: center;
+  background-size: cover;
+  padding: 0;
+}
+.Carrousell--Text {
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  color:black;
+  padding: 0.1em 0px;
+  margin-bottom: 1rem;
+  line-height: 30px;
+}
+
+.text-main{
+  width: 100%;
+}
+.text{
+  font-size: 1.6rem;
+  padding: 0.5em 0px;
+}
+.main-text{
+  margin-left: 20%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-direction: column;
+  background-color: transparent;
+  line-height: 25px;
+}
+.Home{
+  padding: 0;
+}
+
+.main{
+
+  max-width: 100%;
+
+}
+.img1{
+  background-image: url('src/assets/icon1.svg');
+  background-position: center;
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+}
+.img2{
+  background-image: url('src/assets/icon2.svg');
+  background-position: center;
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+}
+.img3{
+  background-image: url('src/assets/icon3.svg');
+  background-position: center;
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+}
+.feature-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.card-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+}
+.card{
+ display: inline-block;
+}
+.text-primary{
+  text-align: left;
+  font-size: 1.3rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
+  line-height: 30px;
+}
+.text-h4{
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.mat-flat-button{
+  margin: 15px;
+}

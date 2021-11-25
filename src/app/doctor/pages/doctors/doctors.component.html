@@ -1,0 +1,10 @@
+
+<div class="content">
+  <h1 class="title" >All doctors available</h1>
+  <div fxLayout="row wrap">
+    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let doctor of dataSource.data | ObjToArray" >
+      <app-card [data]="doctor"></app-card>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,30 @@
+<div class="main">
+  <h2 class="text">Please choose which days you will be available to schedule your meeting with the doctor</h2>
+ <div class="image-calendar"></div>
+  <table>
+    <tr>
+    <td>
+      <mat-form-field class="example-form-field" appearance="fill">
+        <mat-label>Choose a Date</mat-label>
+        <input matInput [matDatepicker]="picker" (dateChange)="dataChanged($event)">
+        <button mat-raised-button (click)="picker.open()">Open</button>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </td>
+    <td>
+      <mat-form-field>
+        <input type="text" matInput  placeholder="Title" [(ngModel)]="reservationData.title">
+      </mat-form-field>
+      <mat-form-field>
+        <input type="text" matInput  placeholder="Content" [(ngModel)]="reservationData.content">
+      </mat-form-field>
+    </td>
+    </tr>
+  </table>
+
+  <button mat-raised-button (click)="addReservation()" color="primary">Reserve</button>
+
+
+</div>
+<router-outlet></router-outlet>
+
